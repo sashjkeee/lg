@@ -1,0 +1,181 @@
+@color: #000;
+@font: 'LGSmartWeb';
+@size: 15px;
+@width: 300px;
+@tablet: ~"(max-width: 300px)";
+@gradient: linear-gradient(to bottom, #f6216a 0%, #e10655 100%);
+
+.model_name {
+	font-family: @font;
+	font-size: @size - 2px;
+	text-transform: uppercase;
+	color: @color;
+	text-align: left;
+	padding-top: 10px;
+}
+.title {
+	color: #5d5c5c;
+	font-family: @font;
+	font-size: @size;
+	margin-top: @size + 2px;
+	text-align: left;
+}
+ul {
+	text-align: center;
+	margin-top: 12px;
+}
+li {
+	list-style: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+li a {
+	width: 100px;
+	height: 100%;
+}
+li a img {
+	margin: 0 5px;
+}
+.title2 {
+	.title;
+	margin-top: @size + 15px;
+}
+input[type="search"] {
+	height: @size + 11px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	width: 80%;
+	background: url(../img/icon.png) center right no-repeat;
+}
+.btn {
+	width: 20%;
+	height: @size + 12px;
+	background: @gradient;
+	float: right;
+	cursor: pointer;
+	text-align: center;
+	line-height: @size + 12px;
+	font-family: @font;
+	font-size: @size - 3px;
+	color: #fff;
+}
+.cluster-balloon-item {
+	margin: 10px;
+	cursor: pointer;
+}
+.widget-content {
+	margin-top: 40px;
+	position: relative;
+}
+#map {
+	width: 294px;
+	height: 318px;
+	margin: 0 auto;
+	position: relative;
+	background: url(https://static-maps.yandex.ru/1.x/?l=map&lang=ru-RU&ll=37.60943%2C55.73098&origin=jsapi-constructor&size=294%2C318&z=10);
+}
+.filter {
+	position: absolute;
+	top: 0px;
+	left: 65%;
+	z-index: 5;
+}
+.filter label {
+	width: 83px;
+	margin-top: 10px;
+	height: @size + 11px;
+	font-size: @size - 2px;
+	color: #5d5c5c;
+	padding: 9px 5px;
+	background: rgba(255,255,255,0.84);
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.6);
+	line-height: @size + 11px;
+	font-family: @font;
+}
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../img/icon1.png) center center no-repeat;
+    cursor:pointer;
+}
+input[type="radio"]:checked + label span {
+    background:url(../img/icon2.png) center center no-repeat;
+}
+.search_mag {
+	width: 179px - 35px;
+	height: @size + 20px;
+	position: absolute;
+	z-index: 5;
+	padding-left: 35px;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-family: @font;
+	font-size: @size - 3px;
+	line-height: @size + 20px;
+	background: url(../img/icon.png) 10px center no-repeat #fff;
+	cursor: pointer;
+}
+.wrapp.magazin .model_name {
+	margin-bottom: 23px;
+}
+.wrapp.magazin img {
+	float: left;
+}
+.info_mag {
+	font-family: @font;
+	font-size: @size + 2px;
+	color: #545454;
+	float: right;
+}
+.info_mag i {
+	font-style: normal;
+	display: block;
+	background: url(../img/icon2.png) center left no-repeat;
+	padding-left: 20px;
+}
+.btns {
+	margin: 20px 0;
+}
+.wrapp.magazin .left_btn {
+	float: left;
+	width: 49.5%;
+	background: @gradient;
+	height: 31px;
+	line-height: 31px;
+	font-weight: bold;
+	font-size: @size - 1.5px;
+	font-family: @font;
+	cursor: pointer;
+}
+.wrapp.magazin .right_btn {
+	.wrapp.magazin .left_btn;
+	float: right;
+	color: #d70546;
+	text-align: center;
+	border: 1px solid #e8e8e8;
+	border-radius: 3px;
+	background: #fff;
+}
+.wrapp.magazin .right_btn span {
+	background: url(../img/phone.png) left center no-repeat;
+	padding-left: 20px;
+}
+#map-two {
+	#map;
+}
+@media @tablet {
+	ul {
+		text-align: left;
+	}
+	li a img {
+		margin: 0;
+	}
+}
